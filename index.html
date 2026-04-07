@@ -629,7 +629,6 @@
 </head>
 <body>
 
-<!-- ===== AGE GATE ===== -->
 <div class="age-gate" id="ageGate">
   <div class="age-gate-box">
     <span class="age-icon">🔞</span>
@@ -645,13 +644,11 @@
   </div>
 </div>
 
-<!-- ===== TOAST ===== -->
 <div class="toast" id="toast">
   <i class="fa-solid fa-circle-check" style="color:var(--primary-light)"></i>
   <span id="toastMsg">تم!</span>
 </div>
 
-<!-- ===== LOGIN MODAL ===== -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal-box">
     <div class="modal-head">
@@ -681,7 +678,6 @@
   </div>
 </div>
 
-<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
     <a class="logo" href="#" aria-label="معفنين السراقنا">
@@ -708,7 +704,6 @@
   </div>
 </header>
 
-<!-- ===== TICKER ===== -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker-track">
     <span class="ticker-item">🤫 الواد دا انا هفضحه في كاليثيا كلها هو والعيال اللي معاه صبرت عليه كتير!</span>
@@ -726,7 +721,6 @@
   </div>
 </div>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -803,7 +797,6 @@
 
 
 
-<!-- ===== EXCLUSIVE CONTENT ===== -->
 <div class="section">
   <div class="section-header">
     <h2 class="section-title">اسرارهم وفيديوهاتهم 🎥</h2>
@@ -890,25 +883,6 @@
   </div>
 </div>
 
-<!-- ===== PROFILES ONLINE ===== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -1008,20 +982,8 @@
     var str = base.toString().replace(/\d/g, function(d){ return digits[d]; });
     var el = document.getElementById('onlineNum');
     if (el) el.textContent = str;
-    var el2 = document.getElementById('statOnline');
-    if (el2) el2.textContent = str;
   }
   setInterval(randomOnline, 4500);
-
-  /* ===== PROFILE VIEWERS ===== */
-  function randomViewers() {
-    var base = 4100 + Math.floor(Math.random() * 250);
-    var digits = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
-    var str = base.toString().replace(/\d/g, function(d){ return digits[d]; });
-    var el = document.getElementById('profileViewers');
-    if (el) el.textContent = str;
-  }
-  setInterval(randomViewers, 6000);
 
   /* ===== SCROLL ANIMATION ===== */
   var io = new IntersectionObserver(function(entries) {
@@ -1039,13 +1001,6 @@
     el.style.transform = 'translateY(22px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     io.observe(el);
-  });
-
-  /* ===== KEYBOARD ACCESSIBILITY ===== */
-  document.querySelectorAll('[role="button"]').forEach(function(el) {
-    el.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
-    });
   });
 </script>
 </body>
